@@ -3,7 +3,6 @@ import styles from "./Reader.module.css";
 import cn from "classnames";
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import Range from "react-range";
 
 export const Reader: React.FC<ReaderProps> = ({
   content,
@@ -32,9 +31,6 @@ export const Reader: React.FC<ReaderProps> = ({
       localStorage.getItem("sentence") as string
     );
     if (localStorage.getItem("sentence") !== null && index !== -1) {
-      // const index = contentArray.indexOf(
-      //   localStorage.getItem("sentence") as string
-      // );
       setShowArray(new Array(index + 1).fill(true));
     }
 
