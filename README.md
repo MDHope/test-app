@@ -1,34 +1,32 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Инструкция по запуску проекта
 
-## Getting Started
-
-First, run the development server:
-
+1. Склонировать репозиторий:
 ```bash
-npm run dev
-# or
-yarn dev
+git clone git@github.com:MDHope/test-app.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Установить зависимости
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+```bash
+npm i
+# or
+yarn i
+```
+3. Запутить проект в dev режиме
+```bash
+npm run dev
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.tsx`.
+4. Открыть [http://localhost:3000](http://localhost:3000).
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## TODO лист по заданию
+- [x] 1. Сервис должен получать данные с историями с бакенда (next.js api routes)
+- [x] 2. Каждый объект истории должен содержать поля: название, текст, обложка (url к картинке), краткое описание.
+- [x] 3. На главной странице показать все истории в виде списка, где каждый элемент это Обложка + Название
+- [x] 4. При нажатии на элемент списка переходить на страницу истории, на которой обложка, название, краткое описание, кнопка “Читать”.
+- [x] 5. По кнопке “Читать” открыть читалку (отдельный компонент), в которой показывается текст истории по одному предложению. Показывать следующее предложение по клику.
+- [x] 6. Запоминать, на каком предложении остановился пользователь в Local Storage, и при открытии читалки начинать с того места, на котором остановился пользователь в прошлый раз.
+- [x] 7*. Завернуть сервис в docker
+> https://hub.docker.com/repository/docker/mdhope/test-app
+- [x] 8*. Реализовать в читалке авточтение: показывать предложения не по клику, а через задаваемый пользователем интервал в секундах.
+> Функционал переключения по клику так же присутствует, еще добавил кнопку паузы/продолжения воспроизведения.
