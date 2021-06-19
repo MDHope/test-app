@@ -1,0 +1,122 @@
+.container {
+  display: grid;
+  grid-template-areas:
+    "title"
+    "controls"
+    "reader";
+}
+
+.title {
+  text-align: center;
+  padding: 10px;
+  color: black;
+  width: 100%;
+  grid-area: title;
+  font-size: 24px;
+  font-weight: bold;
+  background-color: var(--background-title);
+  border-radius: 10px 10px 0 0;
+}
+
+.controls {
+  margin-top: 20px;
+  padding: 0 20px;
+  grid-area: controls;
+  display: grid;
+  grid-template-rows: 50px 50px;
+  grid-template-areas: "buttonRead buttonBack"
+                       "timePicker buttonPause";
+  gap: 10px;
+}
+
+.reader {
+  grid-area: reader;
+  background-color: #d3d3d38c;
+  margin: 20px 20px 0 20px;
+  border-radius: 5px;
+  padding: 10px;
+  min-height: 250px;
+  transition: all 0.3s ease;
+}
+
+.sentence {
+  background-color: rgb(252, 247, 247);
+  padding: 5px;
+  margin-top: 8px;
+  color: black;
+  font-size: 18px;
+  display: block;
+  animation-name: fadeIn;
+  animation-duration: 0.5s;
+}
+
+.button {
+  cursor: pointer;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  transition: all 0.2s ease-out;
+  display: inline-block;
+}
+
+.buttonBack {
+  background-color: var(--button-secondary);
+  grid-area: buttonBack;
+}
+
+.buttonBack:hover {
+  background-color: var(--button-secondary-hover);
+}
+
+.buttonRead {
+  background-color: var(--button-primary);
+  grid-area: buttonRead;
+}
+
+.buttonRead:hover {
+  background-color: var(--button-primary-hover);
+}
+
+.buttonStart {
+  background-color: var(--button-start);
+  grid-area: buttonPause;
+}
+
+.buttonStart:hover {
+  background-color: var(--button-start-hover);
+}
+
+.buttonPause {
+  background-color: var(--button-pause);
+  grid-area: buttonPause;
+}
+
+.buttonPause:hover {
+  background-color: var(--button-pause-hover);
+}
+
+.timePicker {
+  background-color: lightgrey;
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  border-radius: 5px;
+  text-align: center;
+  grid-area: timePicker;
+  color: black;
+}
+
+.timePicker input[type="range"] {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+  to {
+    opacity: 1;
+  }
+}

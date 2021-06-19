@@ -1,7 +1,16 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+import "../styles/globals.css";
+import type { AppProps } from "next/app";
+import Head from "next/head";
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+function MyApp({ Component, pageProps }: AppProps): JSX.Element {
+  return (
+    <>
+      <Head>
+        <title>Тестовое задание - Взахлеб</title>\
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <Component {...pageProps} />
+    </>
+  );
 }
-export default MyApp
+export default MyApp;

@@ -1,0 +1,121 @@
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background-color: var(--background-second);
+  border-radius: 10px;
+  color: white;
+  padding-bottom: 20px;
+  box-shadow: 0px 4px 4px rgba(49, 49, 49, 0.1);
+  width: 760px;
+}
+
+.story {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: [start] auto 1fr [end];
+  grid-template-areas:
+    "title title"
+    "image description"
+    "image button";
+}
+
+.title {
+  text-align: center;
+  padding: 10px;
+  color: black;
+  width: 100%;
+  grid-area: title;
+  font-size: 24px;
+  font-weight: bold;
+  background-color: var(--background-title);
+  border-radius: 10px 10px 0 0;
+}
+
+.image {
+  grid-area: image;
+  width: 300px;
+  height: 500px;
+  position: relative;
+  margin-left: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.description {
+  max-width: 400px;
+  margin-right: 20px;
+}
+
+.button {
+  grid-area: button;
+  margin-top: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  border: none;
+  min-width: 80px;
+  min-height: 40px;
+  border-radius: 5px;
+  color: white;
+  transition: all 0.2s ease-out;
+  display: block;
+}
+
+.buttonBack {
+  background-color: var(--button-secondary);
+  margin-right: 20px;
+}
+
+.buttonBack:hover {
+  background-color: var(--button-secondary-hover);
+}
+
+.buttonRead {
+  background-color: var(--button-primary);
+}
+
+.buttonRead:hover {
+  background-color: var(--button-primary-hover);
+}
+
+@media screen and (max-width: 760px) {
+  .story {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "title"
+      "image"
+      "description"
+      "button";
+  }
+
+  .button {
+    display: inline-block;
+    margin-top: 0;
+  }
+
+  .buttonBack {
+    margin-right: 0;
+    margin-left: 20px;
+  }
+
+  .image {
+    width: 80%;
+    max-width: 450px;
+    justify-self: center;
+    margin-left: 0;
+  }
+
+  .description {
+    text-align: center;
+    justify-self: center;
+    display: grid;
+    gap: 20px;
+  }
+}

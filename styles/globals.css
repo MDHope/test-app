@@ -1,9 +1,27 @@
+:root {
+  --background: #084c61;
+  --background-second: #4f6d7a;
+  --background-title: #e3b505;
+  --button-primary: #db504a;
+  --button-primary-hover: #be3935;
+  --button-secondary: #084c61;
+  --button-secondary-hover: #053847;
+  --button-pause: #e3b505;
+  --button-pause-hover: #b8950b;
+  --button-start: #6ac050;
+  --button-start-hover: #4eb62e;
+  --secondary: black;
+  --secondary-hover: white;
+  --title-color: black;
+  --font-family: "Roboto", sans-serif;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: var(--font-family);
+  background-color: var(--background);
 }
 
 a {
@@ -13,4 +31,9 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.mainContainer {
+  display: flex;
+  flex-wrap: wrap;
 }
